@@ -1,0 +1,62 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap')
+ */
+.index {
+  background-image: url('../images/kelsy-gagnebin-kZ6UYXwMMD8-unsplash.jpg');
+  background-position: center; 
+}
+.courses {
+  background-image: url('../images/elena-joland-uKSdkD_WOxk-unsplash.jpg');
+}
+.tutorial {
+  background-image: url('../images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg');
+}
+.contact {
+  display: grid;
+  grid-template-columns: auto 300px;
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  background-image: url('../images/codioful-formerly-gradienta-Y8K6UFMnKt8-unsplash.jpg');
+}
+.contact :first-child {
+  grid-column: 1 / -1;
+}
+.contact aside {
+  background-color: rgba(255, 255, 255,0.25);
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.contact aside form fieldset {
+  border: 1px solid rgb(214,195,95);
+}
+.follow ul {
+  list-style: none;
+  display: flex;
+  padding:0;
+  gap: 1rem;
+  justify-content: flex-start;
+  grid-template-columns: repeat(4, 0.5rem);
+}
+.contact footer {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255,0.25);
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans sc-<uniquifier> {
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 1000
+
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
