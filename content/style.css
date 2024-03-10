@@ -1,32 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap')
- */
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:normal;
+  font-style: normal;
+}
+.index header, .concept header, .tutorial header, .references header {
+  grid-column: 1 / -1;/*expand header of all pages to to whole width*/
+}
+.index footer, .concept footer, .tutorial footer .references footer {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255,0.25);
+}
+html a {
+  text-decoration: none; /* remove all underlines of links*/
+}
 .index {
-  background-image: url('../images/kelsy-gagnebin-kZ6UYXwMMD8-unsplash.jpg');
+  background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
   background-position: center; 
+  background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
+  display: grid;
+  grid-template-rows: repeat(3, auto);
 }
-.courses {
-  background-image: url('../images/elena-joland-uKSdkD_WOxk-unsplash.jpg');
+.index main {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  grid-template-rows: repeat(2, 1fr);
 }
-.tutorial {
-  background-image: url('../images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg');
+.index main :first-child {
+  grid-column: 1 / -1;
 }
-.contact {
+.index main :first-child figure {
+  float:left;
+}
+.index main section h2 {
+  margin-top: 0.45rem;
+}
+.index main figure {
+  float:left;
+}
+
+.concept {
+  background-image: url('../images/annie-spratt-xTaOPMa6wAE-unsplash.jpg');
+  background-position: center; 
+  background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+.concept main {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, auto);
+
+}
+.tutorials {
+  background-image: url('../images/annie-spratt-YN9zG6nGvFI-unsplash.jpg');
+  background-position: center; 
+  background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, auto);
+}
+.tutorials main {
+  display: grid;
+  gap: 1rem;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+}
+.references {
   display: grid;
   grid-template-columns: auto 300px;
   grid-template-rows: repeat(3, auto);
   gap: 1rem;
-  background-image: url('../images/codioful-formerly-gradienta-Y8K6UFMnKt8-unsplash.jpg');
+  background-image: url('../images/henry-co-ibpb6R7LthM-unsplash.jpg');
+  background-position: center; 
+  background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
 }
-.contact :first-child {
-  grid-column: 1 / -1;
-}
-.contact aside {
+
+.references aside {
   background-color: rgba(255, 255, 255,0.25);
   display: grid;
   grid-template-rows: auto auto;
 }
-.contact aside form fieldset {
+.references aside form fieldset {
   border: 1px solid rgb(214,195,95);
 }
 .follow ul {
@@ -37,11 +96,17 @@
   justify-content: flex-start;
   grid-template-columns: repeat(4, 0.5rem);
 }
-.contact footer {
-  grid-column: 1 / -1;
-  background-color: rgba(255, 255, 255,0.25);
+.references table {
+  width:75%;
+  border-radius: 5px;
+  border: 1px solid rgb(17, 112, 133);
 }
-
+.references table th, .references table td {
+  border: 0.5px solid rgb(7, 102, 123);
+}
+@media screen and (min-width: 600px) {
+  
+}
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
 
