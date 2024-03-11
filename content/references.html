@@ -14,9 +14,9 @@
         <h1>References</h1>
         <nav>
             <ul>
-                <li>main page</li>
-                <li>courses page</li>
-                <li>tutorials page</li>
+                <li><a href="main_page">main page</a></li>
+                <li><a href="concept_page">concept page</a></li>
+                <li><a href="check_point_page">check point page</a></li>
                 <li><a href="#background">backgrounds</a></li>
                 <li><a href="#general">general</a></li>
             </ul>
@@ -25,16 +25,22 @@
     <main>
         <section>
             <h3 id="main_page">main page</h3>
-            <ul>
-                <li><a href='https://unsplash.com/photos/black-iphone-5-beside-brown-framed-eyeglasses-and-black-iphone-5-c-ah-HeguOe9k'>Unsplash: Dan Nelson - black iphone 5 beside brown framed eyeglasses and black iphone 5 c</a></li>
-                <li><a href="https://unsplash.com/photos/photo-of-bulb-artwork-82TpEld0_e4">Unsplash: AbsolutVision - photo of bulb artwork</a></li>
-            </ul>
+            <table>
+                <tr>
+                    <th>Source</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Unsplash: Dan Nelson - black iphone 5 beside brown framed eyeglasses and black iphone 5 c</td>
+                    <td><a href='https://unsplash.com/photos/black-iphone-5-beside-brown-framed-eyeglasses-and-black-iphone-5-c-ah-HeguOe9k'>Link</a></td>
+                </tr>
+            </table>
         </section>
         <section>
-            
+            <h3 id="concept_page">concept page</h3>
         </section>
         <section>
-            
+            <h3 id="check_point_page">check point page</h3>
         </section>
         <section>
             <h3 id="background">Backgrounds:</h3>
@@ -48,16 +54,16 @@
                     <td><a href="https://unsplash.com/photos/white-and-brown-wooden-surface-kAssc7Sx8pg">Link</a></td>
                 </tr>
                 <tr>
-                    <td>Unsplash: Annie Spratt - a white sheet of paper with a brown border</td>
-                    <td><a href="https://unsplash.com/photos/a-white-sheet-of-paper-with-a-brown-border-xTaOPMa6wAE">Link</a></td>
+                    <td>Unsplash: geissht - a plane flying in the sky above the clouds</td>
+                    <td><a href="https://unsplash.com/photos/a-plane-flying-in-the-sky-above-the-clouds-BzS6WjI6IhY">Link</a></td>
                 </tr>
                 <tr>
                     <td>Unsplash: Annie Spratt - white wall paint with white wall pain</td>
                     <td><a href="https://unsplash.com/photos/white-wall-paint-with-white-wall-paint-YN9zG6nGvFI">Link</a></td>
                 </tr>
                 <tr>
-                    <td>Unsplash: Codioful(Formerly Gradienta) - blue sky with white clouds</td>
-                    <td><a href="https://unsplash.com/photos/blue-sky-with-white-clouds-Y8K6UFMnKt8">Link</a></td>
+                    <td>Unsplash: Pawel Czerwinski - a white object with a large amount of fabric on it</td>
+                    <td><a href="https://unsplash.com/photos/a-white-object-with-a-large-amount-of-fabric-on-it-7qGaSSjtIes">Link</a></td>
                 </tr>
             </table>
         </section>
@@ -93,21 +99,22 @@
     </main>
     <aside>
         <section>
-            <form>
+            <form method="post" action="submit.php">               
                 <caption>Contact us</caption>
                 <fieldset>
                     <label>
                         Name:<br>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name">
                     </label><br>
                     <label>
-                        Email:<br>
-                        <input type="email" name="email" id="email">
+                        E-mail:<br>
+                        <input type="email" name="email">
                     </label><br>
                     <label>
                         Message:<br>
                         <textarea name="message" id="message" cols="35" rows="5"></textarea>
                     </label>
+                    <input type="submit" name="submit" value="submit">
                 </fieldset>
             </form>
         </section>
@@ -131,7 +138,7 @@
             <ul>
                 <li><a href="../index.html">main page</a></li>
                 <li><a href="concept.html">concept</a></li>
-                <li><a href="tutorials.html">tutorials</a></li>
+                <li><a href="check_point.html">check point</a></li>
                 <li><a href="references.html">references</a></li>
             </ul>
         </nav>

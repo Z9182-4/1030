@@ -6,11 +6,20 @@ html {
   font-optical-sizing: auto;
   font-weight:normal;
   font-style: normal;
+  line-height: 1.5rem;
+  margin: 1rem;
 }
-.index header, .concept header, .tutorial header, .references header {
+a, a:visited {
+  color: rgb(115, 49, 43);
+}
+.index header, .concept header, .checkPoint header, .references header {
   grid-column: 1 / -1;/*expand header of all pages to to whole width*/
+  background-color: rgba(255, 255, 255,0.15);
 }
-.index footer, .concept footer, .tutorial footer .references footer {
+.index main, .concept main, .checkPoint main, .references main {
+  max-width: 1500px;
+}
+.index footer, .concept footer, .checkPoint footer, .references footer {
   grid-column: 1 / -1;
   background-color: rgba(255, 255, 255,0.25);
 }
@@ -44,20 +53,20 @@ html a {
 }
 
 .concept {
-  background-image: url('../images/annie-spratt-xTaOPMa6wAE-unsplash.jpg');
+  background-image: url('../images/geissht-BzS6WjI6IhY-unsplash.jpg');
   background-position: center; 
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
   display: grid;
   grid-template-rows: 1fr auto 1fr;
 }
-
 .concept main {
   display: grid;
   gap: 1rem;
   grid-template-rows: repeat(3, auto);
-
 }
-.tutorials {
+
+
+.checkPoint {
   background-image: url('../images/annie-spratt-YN9zG6nGvFI-unsplash.jpg');
   background-position: center; 
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
@@ -65,17 +74,23 @@ html a {
   gap: 1rem;
   grid-template-rows: repeat(3, auto);
 }
-.tutorials main {
-  display: grid;
-  gap: 1rem;
-  grid-template: repeat(2, auto) / repeat(2, auto);
+.checkPoint main {
+  display: block
 }
+.checkPoint main section form label{
+  display: block;
+}
+.checkbox label, .radio label{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 .references {
   display: grid;
   grid-template-columns: auto 300px;
   grid-template-rows: repeat(3, auto);
   gap: 1rem;
-  background-image: url('../images/henry-co-ibpb6R7LthM-unsplash.jpg');
+  background-image: url('../images/pawel-czerwinski-7qGaSSjtIes-unsplash.jpg');
   background-position: center; 
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
 }
@@ -104,24 +119,42 @@ html a {
 .references table th, .references table td {
   border: 0.5px solid rgb(7, 102, 123);
 }
+/* Mobile layout */
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+  nav button, nav ul.show {
+    display: block;
+  }
+  nav ul li {
+    display: block;
+  }
+}
+/* Medium layout */
 @media screen and (min-width: 600px) {
-  
+  nav button {
+    display: none;
+  }
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
+  }
+  .checkPoint main {
+    display: grid;
+    gap: 1rem;
+    grid-template: repeat(2, auto) / repeat(2, auto);
+  }
+  nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
 }
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 
-.noto-sans sc-<uniquifier> {
-  font-family: "Noto Sans SC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
 }
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 1000
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 
-.nunito-<uniquifier> {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+}
