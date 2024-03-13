@@ -1,22 +1,52 @@
+<!-- Q1 -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the form id
-    $formId = $_POST["formID"];
+    $allCorrect = isset($_POST["emailPH"]) && isset($_POST["voicePH"]) && isset($_POST["smsPH"]) && isset($_POST["pagePH"]) && isset($_POST["calendarPH"]) && isset($_POST["quishingPH"]);
 
-    // Get the value of crime from the form
-    $crime = $_POST["crime"];
-
-    // Check which form was submitted and handle accordingly
-    if ($formId == "cyberCrime") {
-        // Check if the correct answer was selected for form1
-        if ($crime == "allCorrect") {
-            echo "You are correct! All of these options are correct.";
-        } else {
-            echo "All of these options are correct. Please try again.";
-        }
+    if ($allCorrect) {
+        echo "You are correct! All of these options are correct.";
+    } else {
+        echo "All of these options are correct. Please try again.";
     }
 }
 ?>
+<!-- Q2 -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $correctAnswer = isset($_POST["persSecurity"]) && isset($_POST["safeSecrets"]);
+
+    if ($correctAnswer) {
+        echo "You are correct! The first and third options are correct.";
+    } else {
+        echo "The first and third options are correct. Please try again.";
+    }
+}
+?>
+<!-- Q3 -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $selectedOption = $_POST["avoidPhishing"];
+
+    if ($selectedOption == "allCorrect") {
+        echo "You are correct! All of these options are correct.";
+    } else {
+        echo "All of these are correct. Please try again.";
+    }
+}
+?>
+<!-- Q4 -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $selectedOption = $_POST["crime"];
+
+    if ($selectedOption == "allCorrect") {
+        echo "You are correct! All of these options are correct.";
+    } else {
+        echo "All of these are correct. Please try again.";
+    }
+}
+?>
+<!-- reference contact -->
 <?php
 // define variables and set to empty values
 $name = $email = $comment = "";

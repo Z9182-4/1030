@@ -26,6 +26,13 @@ a, a:visited {
 html a {
   text-decoration: none; /* remove all underlines of links*/
 }
+nav ul, footer ul {
+  list-style-type: none;
+  padding-left:1%;
+}
+nav ul {
+  display: grid;
+}
 .index {
   background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
   background-position: center; 
@@ -72,17 +79,13 @@ html a {
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
   display: grid;
   gap: 1rem;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 1fr, auto, 1fr;
 }
 .checkPoint main {
-  display: block
+  display: block;
 }
 .checkPoint main section form label{
   display: block;
-}
-.checkbox label, .radio label{
-  display: block;
-  margin-bottom: 0.5rem;
 }
 
 .references {
@@ -119,6 +122,52 @@ html a {
 .references table th, .references table td {
   border: 0.5px solid rgb(7, 102, 123);
 }
+.container {
+  max-width: 1200px;
+  margin: auto; /* have the content centered with a maximum width.*/
+}
+nav ul a, nav ul a:visited {
+  display: inline-block;
+  color:black;
+  padding:0.5rem;
+  border:1px solid black;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.button-39 {
+  background-color: #ffffff;
+  border: 1px solid rgb(209,213,219);
+  border-radius: 0.625rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.925rem;
+  font-weight: 475;
+  line-height: 1.5rem;
+  padding: 0.35rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
 /* Mobile layout */
 @media screen and (max-width: 600px) {
   nav ul {
@@ -127,28 +176,33 @@ html a {
   nav button, nav ul.show {
     display: block;
   }
-  nav ul li {
-    display: block;
-  }
 }
 /* Medium layout */
 @media screen and (min-width: 600px) {
   nav button {
     display: none;
   }
-  nav ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
-  }
-  .checkPoint main {
-    display: grid;
-    gap: 1rem;
-    grid-template: repeat(2, auto) / repeat(2, auto);
-  }
   nav ul li {
     display: inline-block;
     margin: 0 0.5rem;
   }
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .checkPoint main div{
+    display: grid;
+    gap: 1rem;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+  }
+    .index footer div ul li,
+    .concept footer div ul li,
+    .checkPoint footer div ul li,
+    .references footer div ul li {
+      display: inline-block;
+      justify-content: space-between;
+      margin: 3.5%;
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {

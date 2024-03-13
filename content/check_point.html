@@ -10,9 +10,10 @@
 </head>
 <body class="checkPoint">
     <header>
+        <div class="container">
         <h1>Check point</h1>
         <nav>
-            <button>Menu</button>
+            <button class="button-39">Menu</button>
             <ul>
                 <li><a href="#type">common type of phishing</a></li>
                 <li><a href="#attention">why do we need attention</a></li>
@@ -20,158 +21,150 @@
                 <li><a href="#crime">Why is it increasing</a></li>
             </ul>
         </nav>
+        </div>
     </header>
     <main>
+        <div class="container">
         <section>
             <h3 id="type">What is the common type of phishing?</h3>
-            <form action="https://www.boredapi.com/api/activity?type=:type" method="GET">
+            <form action="submit.php" method="POST">
                 <fieldset>
-                    <legend>choose <strong>one</strong> or <strong>more</strong></legend>
-                    <div id="checkbox">
-                        <label>
-                            <input type="checkbox" name="emailPH" value="emailPhishing ">
-                            email phishing 
-                        </label>
-                        <label>
-                            <input type="checkbox" name="voicePH" value="voicePhishing"> 
-                            voice phishing
-                        </label>
-                        <label>
-                            <input type="checkbox" name="smsPH" value="smsPhishing"> 
-                            sms phishing
-                        </label>
-                        <label>
-                            <input type="checkbox" name="pagePH" value="pageHijacking"> 
-                            page hijacking
-                        </label>
-                        <label>
-                            <input type="checkbox" name="calendarPH" value="calendarPhishing"> 
-                            calendar phishing
-                        </label>
-                        <label>
-                            <input type="checkbox" name="quishingPH" value="quishing"> 
-                            quishing
-                        </label>
-                        <input type="submit" value="submit">
-                    </div>
+                    <legend>Choose <strong>ONE</strong> or <strong>more</strong></legend>
+                    <label>
+                        <input type="checkbox" name="emailPH" value="emailPhishing ">
+                        email phishing 
+                    </label>
+                    <label>
+                        <input type="checkbox" name="voicePH" value="voicePhishing"> 
+                        voice phishing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="smsPH" value="smsPhishing"> 
+                        sms phishing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pagePH" value="pageHijacking"> 
+                        page hijacking
+                    </label>
+                    <label>
+                        <input type="checkbox" name="calendarPH" value="calendarPhishing"> 
+                        calendar phishing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="quishingPH" value="quishing"> 
+                        quishing
+                    </label>
+                    <input type="submit" value="submit">
                 </fieldset>
-                
             </form>
         </section>
         <section>
             <h3 id="attention">Why should we pay attention to cyber security?</h3>
-            <form action="https://www.boredapi.com/api/activity?type=:type" method="GET">
+            <form action="submit.php" method="POST">
                 <fieldset>
-                    <legend>choose <strong>more than one</strong> options</legend>
-                    <div id="checkbox">
-                        <label>
-                            <input type="checkbox" name="personalSecurity" value="personalSecurity ">
-                            Prevent the theft and abuse of personal information 
-                        </label>
-                        <label>
-                            <input type="checkbox" name=" enhancePerformance" value="enhancePerformance"> 
-                            Improve computer performance
-                        </label>
-                        <label>
-                            <input type="checkbox" name="safeguardSecrets" value="safeguardSecrets"> 
-                            Protect corporate secrets and business secrets
-                        </label>
-                        <label>
-                            <input type="checkbox" name="boostConnectivity" value="boostConnectivity"> 
-                            Increase network speed
-                        </label>
-                        <label>
-                            <input type="checkbox" name="amplifyInfluence" value="amplifyInfluence"> 
-                            Increase the influence of social media
-                        </label>
-                        <input type="submit" value="submit">
-                    </div>
+                    <legend>Choose <strong>TWO</strong> of the options</legend>
+                    <label>
+                        <input type="checkbox" name="persSecurity" value="persSecurity ">
+                        Prevent the theft and abuse of personal information 
+                    </label>
+                    <label>
+                        <input type="checkbox" name="enhPerformance" value="enhPerformance"> 
+                        Improve computer performance
+                    </label>
+                    <label>
+                        <input type="checkbox" name="safeSecrets" value="safeSecrets"> 
+                        Protect corporate secrets and business secrets
+                    </label>
+                    <label>
+                        <input type="checkbox" name="boostConnect" value="boostConnect"> 
+                        Increase network speed
+                    </label>
+                    <label>
+                        <input type="checkbox" name="influence" value="influence"> 
+                        Increase the influence of social media
+                    </label>
+                    <input type="submit" value="submit">
                 </fieldset>
-                
             </form>
         </section>
         <section>
             <h3 id="avoid">How to avoid phishing?</h3>
-            <p><a href="concept.html#phishing">Forgot? check again</a></p>
-            <form action="submit.php">
+            <p><a href="concept.html#phishing" target="_blank">Forgot? check again</a></p>
+            <form action="submit.php" method="POST">
                 <fieldset>
-                    <legend>choose <strong>one</strong> of the options</legend>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="avoidPhishing" value="changePassword"> 
-                            Change the password regularly                        
-                        </label>
-                        <label>
-                            <input type="radio" name="avoidPhishing" value="ignSuspEmail"> 
-                            Ignore suspicious emails received
-                        </label>
-                        <label>
-                            <input type="radio" name="avoidPhishing" value="avdSuspLink"> 
-                            Avoid clicking suspicious links
-                        </label>
-                        <label>
-                            <input type="radio" name="avoidPhishing" value="avdSSInfo"> 
-                            Avoid sending sensitive information by email or text message
-                        </label>
-                        <label>
-                            <input type="radio" name="avoidPhishing" value="2FA"> 
-                            Use multi-factor authentication on all systems. 
-                        </label>
-                        <label>
-                            <input type="radio" name="avoidPhishing" value="allCorrect"> 
-                            All of these are correct.
-                        </label>
-                        <input type="submit" name="formID" value="SUBMIT">
-                    </div>
-                    
+                    <legend>Choose <strong>ONE</strong> of the options</legend>
+                    <label>
+                        <input type="radio" name="avoidPhishing" value="changePassword"> 
+                        Change the password regularly                        
+                    </label>
+                    <label>
+                        <input type="radio" name="avoidPhishing" value="ignSuspEmail"> 
+                        Ignore suspicious emails received
+                    </label>
+                    <label>
+                        <input type="radio" name="avoidPhishing" value="avdSuspLink"> 
+                        Avoid clicking suspicious links
+                    </label>
+                    <label>
+                        <input type="radio" name="avoidPhishing" value="avdSSInfo"> 
+                        Avoid sending sensitive information by email or text message
+                    </label>
+                    <label>
+                        <input type="radio" name="avoidPhishing" value="2FA"> 
+                        Use multi-factor authentication on all systems. 
+                    </label>
+                    <label>
+                        <input type="radio" name="avoidPhishing" value="allCorrect"> 
+                        All of these are correct.
+                    </label>
+                    <input type="submit" name="formID" value="SUBMIT">
                 </fieldset>
             </form>
         </section>
         <section>
             <h3 id="crime">Why is Cyber Crimes increasing every year?</h3>
-            <p><a href="concept.html#cyber_crimes">Forgot? check again</a></p>
-            <form action="submit.php">
+            <p><a href="concept.html#cyber_crimes" target="_blank">Forgot? check again</a></p>
+            <form action="submit.php" method="POST">
                 <fieldset>
                     <legend>choose <strong>one</strong> of the options</legend>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="crime" value="profitable"> 
-                            Even with minimal effort, cybercriminals often reap substantial rewards.
-                        </label>
-                        <label>
-                            <input type="radio" name="crime" value="massTargeting"> 
-                            Attackers have the capability to target a vast number of victims simultaneously.
-                        </label>
-                        <label>
-                            <input type="radio" name="crime" value="effortless"> 
-                            Cybercrime is straightforward to execute.
-                        </label>
-                        <label>
-                            <input type="radio" name="crime" value="Streamlined"> 
-                            The advent of cryptocurrencies has streamlined money laundering practices.
-                        </label>
-                        <label>
-                            <input type="radio" name="crime" value="minimalRisk"> 
-                            The risk of detection and apprehension is minimal.
-                        </label>
-                        <label>
-                            <input type="radio" name="crime" value="allCorrect"> 
-                            All of these are correct.
-                        </label>
-                        <input type="submit" name="formID" value="SUBMIT">
-                    </div>
+                    <label>
+                        <input type="radio" name="crime" value="profitable"> 
+                        Even with minimal effort, cybercriminals often reap substantial rewards.
+                    </label>
+                    <label>
+                        <input type="radio" name="crime" value="massTargeting"> 
+                        Attackers have the capability to target a vast number of victims simultaneously.
+                    </label>
+                    <label>
+                        <input type="radio" name="crime" value="effortless"> 
+                        Cybercrime is straightforward to execute.
+                    </label>
+                    <label>
+                        <input type="radio" name="crime" value="Streamlined"> 
+                        The advent of cryptocurrencies has streamlined money laundering practices.
+                    </label>
+                    <label>
+                        <input type="radio" name="crime" value="minimalRisk"> 
+                        The risk of detection and apprehension is minimal.
+                    </label>
+                    <label>
+                        <input type="radio" name="crime" value="allCorrect"> 
+                        All of these are correct.
+                    </label>
+                    <input type="submit" name="formID" value="SUBMIT">
                 </fieldset>
             </form>
         </section>
+        </div>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="../index.html">main page</a></li>
-                <li><a href="concept.html">concept</a></li>
-                <li><a href="check_point.html">check point</a></li>
-                <li><a href="references.html">references</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+        <ul>
+            <li><a href="../index.html">main page</a></li>
+            <li><a href="concept.html">concept</a></li>
+            <li><a href="check_point.html">check point</a></li>
+            <li><a href="references.html">references</a></li>
+        </ul>
+        </div>
     </footer>
 </body>
