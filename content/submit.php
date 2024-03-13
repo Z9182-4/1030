@@ -1,6 +1,6 @@
 <!-- Q1 -->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $allCorrect = isset($_POST["emailPH"]) && isset($_POST["voicePH"]) && isset($_POST["smsPH"]) && isset($_POST["pagePH"]) && isset($_POST["calendarPH"]) && isset($_POST["quishingPH"]);
 
     if ($allCorrect) {
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!-- Q2 -->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $correctAnswer = isset($_POST["persSecurity"]) && isset($_POST["safeSecrets"]);
 
     if ($correctAnswer) {
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!-- Q3 -->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $selectedOption = $_POST["avoidPhishing"];
 
     if ($selectedOption == "allCorrect") {
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!-- Q4 -->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $selectedOption = $_POST["crime"];
 
     if ($selectedOption == "allCorrect") {
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // define variables and set to empty values
 $name = $email = $comment = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
   $name = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
   $comment = test_input($_POST["comment"]);
