@@ -1,13 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+/*  --TABLE OF CONTENT--
+    - ROOT
+    - GENERAL LAYOUT FOR ALL PAGES
+    - INDEX
+    - CONCEPT
+    - CHECKPOINT
+    - REFERENCES
+    - RESPONSIVE DESIGN
+      - Mobile layout
+      - Medium layout
+      - Large devices (laptops/desktops, 992px and up)
+      - Extra large devices (large laptops and desktops, 1200px and up)
 
+
+
+*/
 :root {
+  --fontsize--small: 100%;
+  --fontsize--medium: 115%;
+  --fontsize--large: 120%;
+  --fontsize--extra-large: 125%;
   --colors--text-primary: rgb(25, 37, 56);
   --colors--a:rgb(82, 0, 0);
   --colors--background:rgba(255,255,255,0.15);
-  --layout--small-spacing:1rem;
-  --layout--middle-spacing:1.5rem;
-  --layout--large-spacing:2rem;
-  --layout--extra-large-spacing:3.5rem;
+  --colors--border: rgb(7, 102, 123);
+  --colors--background--link: rgba(212, 198, 145, 0.85);
+  --layout--padding: 0.375rem;
+  --layout--extra-small-spacing: 0.5rem;
+  --layout--small-spacing: 1rem;
+  --layout--middle-spacing: 1.5rem;
+  --layout--large-spacing: 2rem;
+  --layout--extra-large-spacing: 3.5rem;
+  --width--max: 1200px;
+  --width--standard: 100%;
+  --width--small: 75%;
+  --width--medium: 95%;
 }
 html {
   scroll-behavior: smooth;
@@ -16,10 +43,15 @@ html {
   font-weight:normal;
   font-style: normal;
   line-height: var(--layout--middle-spacing);
-  margin: 1rem;
+  margin: var(--layout--small-spacing);
 }
 html a {
   text-decoration: none; /* remove all underlines of links*/
+}
+header, main, footer {
+  background-color: var(--colors--background);/* set the background color and margin for all header, main and footer*/
+  margin: var(--layout--extra--small-spacing);
+  height: auto;
 }
 a, a:visited {
   color: var(--colors--a);
@@ -27,26 +59,35 @@ a, a:visited {
 p {
   color: var(--text--color--primary);
 }
+h1{
+  margin-left: var(--layout--small-spacing);
+}
 main ul {
   padding-left: var(--layout--small-spacing);
 }
+nav ul li, footer ul li {
+  background-color: var(--colors--background--link);
+}
+footer ul{
+  margin: 0;
+}
 .index header, .index footer, .concept header, .concept footer, .checkPoint header, .checkPoint footer, .references header, .references footer{
   grid-column: 1 / -1;/*expand header of all pages to to whole width*/
-  background-color: var(--colors--background);
 }
 nav ul, footer ul {
   list-style-type: none; /* remove all underlines of links of nav and footer*/
   padding: 0;
+  margin-left: var(--layout--small-spacing);
 }
 section {
   margin: 2.75%;
 }
 label input{
-  cursor: pointer;
+  cursor: pointer;/*change the cursor to pointer when hovering over the input*/
 }
 th, td {
-  padding: 0.5rem;
-  text-align: left;
+  padding: var(--layout--extra-small-spacing);
+  text-align: center;
 }
 .index {
   background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
@@ -70,7 +111,7 @@ th, td {
 }
 
 .index main section h2 {
-  margin: 0 0 0.375rem 0;
+  margin: 0 0 1% 0;
 }
 .index main figure {
   float:left;
@@ -110,7 +151,7 @@ th, td {
 .checkPoint main section form label{
   display: block;
 }
-
+/* REFERENCE */
 .references {
   display: grid;
   grid-template-columns: auto 175px;
@@ -126,11 +167,11 @@ th, td {
 }
 
 .references aside {
-  background-color: rgba(255, 255, 255,0.25);
+  background-color: var(--colors--background);
   display: block;
 }
 .references aside form fieldset {
-  border: 1px solid rgb(214,195,95);
+  border: 1px solid var(--colors--border);
   padding: 0;
 }
 .follow ul {
@@ -142,21 +183,20 @@ th, td {
   grid-template-columns: repeat(4, 0.5rem);
 }
 .references table {
-  width:75%;
+  width:var(--width--small);
   border-radius: 5px;
-  border: 1px solid rgb(17, 112, 133);
+  border: 1px solid var(--colors--border);
 }
 .references table th, .references table td {
-  border: 0.5px solid rgb(7, 102, 123);
-  padding: 0.375rem;
+  border: 0.5px solid var(--colors--border);
+  padding: var(--layout--extra-small-spacing);
 }
 .references .container section table {
-  width: 95%;
+  width: var(--width--medium);
 }
 nav ul a, nav ul a:visited {
   display: inline-block;
-  padding:0.25rem;
-  border-bottom:1px dotted red;
+  padding: var(--layout--extra-small-spacing);
   box-sizing: border-box;
 }
 
@@ -170,7 +210,7 @@ nav ul a, nav ul a:visited {
   font-size: 0.925rem;
   font-weight: 475;
   line-height: 1.5rem;
-  padding: 0.35rem;
+  padding: var(--layout--extra-small-spacing);
   text-align: center;
   text-decoration: none #D1D5DB solid;
   text-decoration-thickness: auto;
@@ -200,7 +240,7 @@ nav ul a, nav ul a:visited {
 }
 
 .float-left img {/*regulate the shape of images*/
-  width: 100%;
+  width: var(--width--standard);
   vertical-align: middle;
   margin-bottom: 1rem;
   margin-top: -10px;
@@ -210,7 +250,7 @@ nav ul a, nav ul a:visited {
   margin-top:-1rem;
 }
 audio {
-  width: 100%;
+  width: var(--width--standard);
 }
 
 /* Mobile layout */
@@ -225,7 +265,7 @@ audio {
 /* Medium layout */
 @media screen and (min-width: 600px) {
   html {
-    font-size: 115%;
+    font-size: var(--fontsize--medium);
   }
   nav button {
     display: none;
@@ -239,26 +279,24 @@ audio {
     gap: var(--layout--small-spacing);
     grid-template: repeat(2, auto) / repeat(2, 1fr);
   }
-  .index footer div ul li,
-  .concept footer div ul li,
-  .checkPoint footer div ul li,
-  .references footer div ul li {
-    display: inline-block;
-    justify-content: space-between;
+  footer div ul li {
+    display: inline;
     margin: 3.5%;
   }
   .references main section table {
-        display: block;/* table will be displayed as block */
-        overflow-x: auto;/*horizontally scrollable*/
-        width: 100%;
-        border: 0;/* remove border */
+    display: block;/* table will be displayed as block */
+    overflow-x: auto;/*horizontally scrollable*/
+    width: var(--width--standard);
+    border: 0;/* remove border */
   }
-  
+  footer ul {
+    height:auto;
+  }
 }
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops) */
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 120%;
+    font-size: var(--fontsize--large);
     line-height: var(--layout--large-spacing);
   }
   .checkPoint main section form label {
@@ -272,7 +310,7 @@ audio {
   .references section:nth-child(2) {
     grid-column: 2;
     grid-row: 1 / span 3;
-    width: 100%;
+    width: var(--width--standard);
   }
   .concept main div {
     display: grid;
@@ -290,30 +328,25 @@ audio {
     margin-top: 0;
   }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Extra large devices (large laptops and desktops) */
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 125%;
+    font-size: var(--fontsize--extra-large);
     line-height: var(--layout--large-spacing);
   }
   .container {
-    max-width: 1200px;
+    max-width: var(--width--max);
     margin: auto; /* have the content centered with a maximum width.*/
   }
   main .container {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
+    max-width: var(--width--max);
     margin: auto;
   }
   
   main .container section {
     align-self: flex-start;
-    width: 100%;
-  }
-  
-  .references main {
-    justify-self: end;
-    width: 100%;
+    width: var(--width--standard);
   }
 }
