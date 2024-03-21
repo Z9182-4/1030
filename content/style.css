@@ -11,10 +11,8 @@
       - Medium layout
       - Large devices (laptops/desktops, 992px and up)
       - Extra large devices (large laptops and desktops, 1200px and up)
-
-
-
 */
+/* ROOT */
 :root {
   --fontsize--small: 100%;
   --fontsize--medium: 115%;
@@ -36,6 +34,7 @@
   --width--small: 75%;
   --width--medium: 95%;
 }
+/* GENERERAL */
 html {
   scroll-behavior: smooth;
   font-family: "Noto Sans SC", sans-serif;
@@ -89,6 +88,7 @@ th, td {
   padding: var(--layout--extra-small-spacing);
   text-align: center;
 }
+/* INDEX */
 .index {
   background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
   background-position: center; 
@@ -109,7 +109,6 @@ th, td {
   float:left;
   margin: 0 2.5% 1% 0;
 }
-
 .index main section h2 {
   margin: 0 0 1% 0;
 }
@@ -117,6 +116,7 @@ th, td {
   float:left;
 }
 
+/* CONCEPT */
 .concept {
   background-image: url('../images/geissht-BzS6WjI6IhY-unsplash.jpg');
   background-position: center; 
@@ -136,7 +136,7 @@ th, td {
   margin-top: var(--layout--extra-large-spacing);
 }
 
-
+/* CHECK POINT*/
 .checkPoint {
   background-image: url('../images/annie-spratt-YN9zG6nGvFI-unsplash.jpg');
   background-position: center; 
@@ -151,6 +151,7 @@ th, td {
 .checkPoint main section form label{
   display: block;
 }
+
 /* REFERENCE */
 .references {
   display: grid;
