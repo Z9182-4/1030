@@ -1,7 +1,7 @@
 <!-- Q1 -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $allCorrect = isset($_POST["emailPH"]) && isset($_POST["voicePH"]) && isset($_POST["smsPH"]) && isset($_POST["pagePH"]) && isset($_POST["calendarPH"]) && isset($_POST["quishingPH"]);
+    $allCorrect = isset($_GET["emailPH"]) && isset($_GET["voicePH"]) && isset($_GET["smsPH"]) && isset($_GET["pagePH"]) && isset($_GET["calendarPH"]) && isset($_GET["quishingPH"]);
 
     if ($allCorrect) {
         echo "You are correct! All of these options are correct.";
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <!-- Q2 -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $correctAnswer = isset($_POST["persSecurity"]) && isset($_POST["safeSecrets"]);
+    $correctAnswer = isset($_GET["persSecurity"]) && isset($_GET["safeSecrets"]);
 
     if ($correctAnswer) {
         echo "You are correct! The first and third options are correct.";
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <!-- Q3 -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $selectedOption = $_POST["avoidPhishing"];
+    $selectedOption = $_GET["avoidPhishing"];
 
     if ($selectedOption == "allCorrect") {
         echo "You are correct! All of these options are correct.";
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <!-- Q4 -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $selectedOption = $_POST["crime"];
+    $selectedOption = $_GET["crime"];
 
     if ($selectedOption == "allCorrect") {
         echo "You are correct! All of these options are correct.";
@@ -52,9 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 $name = $email = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
-  $comment = test_input($_POST["comment"]);
+  $name = test_input($_GET["name"]);
+  $email = test_input($_GET["email"]);
+  $comment = test_input($_GET["comment"]);
 }
 
 function test_input($data) {
