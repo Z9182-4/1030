@@ -9,15 +9,3 @@ document.addEventListener('DOMContentLoaded', function() {
         navUl.classList.toggle('show');
     });
 });
-
-var titles = document.querySelectorAll('.toggle-title');
-titles.forEach(function(title) {
-    title.addEventListener('click', function() {
-        var content = this.parentNode.parentNode.querySelector('.toggle-content');
-        if (content.style.display === 'none') {
-            content.style.display = 'block';
-        } else {
-            content.style.display = 'none';
-        }
-    });
-});

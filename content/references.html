@@ -29,12 +29,12 @@
     <main>
         <div class="container">
         <section>
-            <h2 id="main_page">main page</h3>
+            <h2 id="main_page">main page</h2>
             <table>
                 <tr>
                     <th scope="col" rowspan="1"></th>
                     <th scope="col" rowspan="1">Source</th>
-                    <th scope="col" rowspan="">Link</th>
+                    <th scope="col" rowspan="1">Link</th>
                 </tr>
                 <tr>
                     <th scope="row" rowspan="1">Image</th>
@@ -44,13 +44,13 @@
             </table>
         </section>
         <section>
-            <h2 id="concept_page">concept page</h3>
+            <h2 id="concept_page">concept page</h2>
             <table>
                 <thead>
                 <tr>
                     <th scope="col" rowspan="1"></th>
                     <th scope="col" rowspan="1">Source</th>
-                    <th scope="col" rowspan="">Link</th>
+                    <th scope="col" rowspan="1">Link</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -141,7 +141,7 @@
               </table>
         </section>
         <section>
-            <h2 id="background">Backgrounds:</h3>
+            <h2 id="background">Backgrounds:</h2>
             <table>
                 <tr>
                     <th scope="col" rowspan="1"></th>
@@ -171,13 +171,15 @@
             </table>
         </section>
         <section>
-            <h2 id="general">General: for styling and outline</h3>
+            <h2 id="general">General: for styling and outline</h2>
             <table>
                 <tr>
+                    <th scope="col" rowspan="1"></th>
                     <th>Source</th>
                     <th>Link</th>
                 </tr>
                 <tr>
+                    <th scope="row" rowspan="2">Web elements</th>
                     <td>W3Schools</td>
                     <td><a href="https://www.w3schools.com/">Link</a></td>
                 </tr>
@@ -186,29 +188,29 @@
                     <td><a href="https://developer.mozilla.org/en-US/">Link</a></td>
                 </tr>
                 <tr>
+                    <th scope="row" rowspan="1">Outline</th>
                     <td>OpenAI ChatGPT</td>
                     <td><a href="https://chat.openai.com">Link</a></td>
                 </tr>
                 <tr>
+                    <th scope="row" rowspan="1">Image editing</th>
                     <td>Adobe Photoshop</td>
                     <td><a href="https://www.adobe.com/ca/products/photoshop.html#">Link</a></td>
                 </tr>
                 <tr>
+                    <th scope="row" rowspan="1">Fonts</th>
                     <td>Google Fonts: Noto Sans Simplified Chinese</td>
                     <td><a href="https://fonts.google.com/">Link</a></td>
                 </tr>
-                <tr>
-                    <td>CSS Scan: button 39</td>
-                    <td><a href="https://getcssscan.com/css-buttons-examples">Link</a></td>
-                </tr>
             </table>
         </section>
-        <div>
+        </div>
     </main>
     <aside>
         <section>
+            <h2>Contact us</h2>
             <form action="submit.php" method="GET">               
-                <caption>Contact us</caption>
+                
                 <fieldset>
                     <label>
                         Name:<br>
@@ -221,13 +223,21 @@
                     <label>
                         Message:<br>
                         <textarea name="message" id="message" cols="20" rows="5"></textarea>
-                    </label>
+                    </label><br>
+                    <label for="source">How did you hear about us</label>
+                    <select name="source" id="source">
+                        <option value="sengine">Search engine</option>
+                        <option value="friend">Through a friend</option>
+                        <option value="smedia">Social media</option>
+                        <option value="blog">Blog</option>
+                        <option value="other">Other</option>
+                    </select>
                     <input type="submit" name="submit" value="submit">
                 </fieldset>
             </form>
         </section>
         <section class="follow">
-            <h3>Follow us</h2>
+            <h2>Follow us</h2>
             <ul>
                 <li><a href="instagram"><i aria-hidden="true" class="fa-brands fa-instagram"></i><span class="fa-sr-only"></span></a></li>
                 <li><a href="x"><i aria-hidden="true" class="fa-brands fa-x-twitter"></i><span class="fa-sr-only"></span></a></li>
@@ -236,7 +246,8 @@
             </ul>
         </section>
         <section class="podcast">
-            <h3>Podcast</h2>
+            <h2>Podcast</h2>
+            <p>Listen to our podcast on information security.</p>
             <audio controls>
                 <source src="audio.mp3" type="audio/mpeg">
                 <p><a href="audio.mp3" download="audio.mp3">Download</a></p>
