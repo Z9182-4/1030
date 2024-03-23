@@ -48,7 +48,7 @@ html {
 html a {
   text-decoration: none; /* remove all underlines of links*/
 }
-main .container,header, footer {
+main, header, footer {
   background-color: var(--colors--background);/* set the background color and margin for all header, main and footer*/
   margin: var(--layout--extra--small-spacing);
   height: auto;
@@ -78,7 +78,7 @@ nav ul, footer ul {
   list-style-type: none; /* remove all underlines of links of nav and footer*/
   padding: 0;
   height: auto;
-  margin: 2% 5.5% 2% 0;
+  margin: 2% 5.5% 2% 1.25%;
   box-sizing:content-box;
 }
 section {
@@ -111,7 +111,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(249, 250, 251);
+  background-color: rgba(15, 106, 197, 0.8);
 }
 
 button:focus {
@@ -153,7 +153,6 @@ figcaption {
 
 section {
   max-width: 95%;
-  margin: auto;
 }
 span {
   font-weight: bold;
@@ -226,7 +225,6 @@ span {
 /* REFERENCE */
 .references {
   display: grid;
-  
   grid-template-rows: repeat(3, auto);
   gap: var(--layout--small-spacing);
   background-image: url('../images/annie-spratt-tmoFNI1ZEwA-unsplash.jpg');
@@ -244,8 +242,9 @@ span {
   padding: var(--layout--padding);
 }
 .references aside form fieldset {
-  border: 1px solid var(--colors--border);
+  border: none;
   padding: 0;
+  
 }
 .follow ul {
   list-style: none;
@@ -268,6 +267,17 @@ span {
 .references .container section table {
   width: var(--width--medium);
 }
+.topBtn {
+  position: fixed;
+  /* Fixed positioning makes the element stay in the same place even when the page is scrolled */
+  bottom: 0;
+  /* Position at the bottom of the viewport */
+  right: 0;
+  /* Position at the right of the viewport */
+  display: inline;
+  max-width: 17.5%;
+  min-width: 2.5rem;
+}
 /* Mobile layout */
 @media screen and (max-width: 600px) {
   nav ul {
@@ -277,7 +287,6 @@ span {
   nav button, nav ul.show {
     display: block;/* show the button and the list when the screen is smaller than 600px */
   }
-
   figure img {
     max-width: 100%;/* make the image responsive */
     height: auto;
@@ -309,7 +318,7 @@ span {
   .checkPoint main div{
     display: grid;
     gap: var(--layout--small-spacing);
-    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    grid-template: repeat(2, auto)/ repeat(2, auto);
   }
   footer div ul li {
     display: inline;
@@ -324,7 +333,14 @@ span {
   .references main section {
     margin-top: 2%;
   }
-  
+  .references aside {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+  }
+
+  .references aside section:nth-child(1) {
+    grid-row: 1/-1;
+  }
 }
 /* Large devices (laptops/desktops) */
 @media only screen and (min-width: 992px) {
@@ -360,6 +376,10 @@ span {
     grid-row: 1 / span 3;/* span the aside to the bottom */
     width: var(--width--standard);
   }
+  .references aside {
+    display: block;
+  }
+  
   .podcast p {
     font-size: 85%;/* reduce the font size */
   }
