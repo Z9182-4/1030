@@ -366,20 +366,9 @@ span {
   .references {
     grid-template-columns: auto 200px;/* set the aside to the right */
   }
-  .references main div {
-    display: grid;
-    gap: var(--layout--small-spacing);
-    grid-template-columns: repeat(2, 1fr);/* set the main content to two columns */
-  }
-  .references section:nth-child(2) {
-    grid-column: 2;/* move the aside to the right */
-    grid-row: 1 / span 3;/* span the aside to the bottom */
-    width: var(--width--standard);
-  }
   .references aside {
     display: block;
   }
-  
   .podcast p {
     font-size: 85%;/* reduce the font size */
   }
@@ -413,7 +402,6 @@ span {
     margin: auto; /* have the content centered with a maximum width.*/
   }
   main .container {
-    display: flex;
     justify-content: center;
     max-width: var(--width--max);
     margin: auto;
