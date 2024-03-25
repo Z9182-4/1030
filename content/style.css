@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+
 /*  --TABLE OF CONTENT--
     - ROOT
     - GENERAL LAYOUT FOR ALL PAGES
@@ -12,106 +13,112 @@
       - Large devices (laptops/desktops, 992px and up)
       - Extra large devices (large laptops and desktops, 1200px and up)
 */
+
 /* ROOT */
 :root {
-  --fontsize--small: 100%;
-  --fontsize--medium: 115%;
-  --fontsize--large: 120%;
-  --fontsize--extra-large: 125%;
-  --colors--text-primary: rgb(25, 37, 56);
-  --colors--a:rgb(82, 0, 0);
-  --colors--background:rgba(255, 255, 255, 0.251);
-  --colors--border: rgb(7, 102, 123);
-  --colors--background--link: rgba(230, 222, 193, 0.346);
-  --colors--background--table:rgba(221, 243, 254, 0.152);
-  --colors--background--section: rgba(219, 179, 179, 0.153);
-  --layout--padding: 0.375rem;
-  --layout--extra-small-spacing: 0.5rem;
-  --layout--small-spacing: 1rem;
-  --layout--middle-spacing: 1.5rem;
-  --layout--large-spacing: 2rem;
-  --layout--extra-large-spacing: 3.5rem;
-  --width--max: 1200px;
-  --width--standard: 100%;
-  --width--small: 75%;
-  --width--medium: 95%;
+  --fontsize-medium: 115%;
+  --fontsize-large: 125%;
+  --colors-text-primary: rgb(25 37 56);
+  --colors-a:rgb(82 0 0);
+  --colors-background:rgb(255 255 255 / 25.1%);
+  --colors-border: rgb(7 102 123);
+  --colors-background-link: rgb(230 222 193 / 34.6%);
+  --colors-background-table:rgb(221 243 254 / 15.2%);
+  --colors-background-section: rgb(219 179 179 / 15.3%);
+  --layout-padding: 0.375rem;
+  --layout-spacing-extra-small: 0.5rem;
+  --layout-spacing-small: 1rem;
+  --layout-lineheight-standard:1.5;
+  --layout-lineheight-large:1.75;
+  --layout-lineheight-extralarge:1.85;
+  --width-max: 1200px;
+  --width-standard: 95%;
+  --width-small: 75%;
 }
+
 /* GENERERAL */
 html {
   scroll-behavior: smooth;/* smooth scrolling */
   font-family: "Noto Sans SC", sans-serif;/* set the font family */
   font-weight:normal;/* set the font weight */
   font-style: normal;/* set the font style */
-  line-height: var(--layout--middle-spacing);
-  margin: var(--layout--small-spacing);
+  line-height: var(--layout-lineheight-standard);
+  margin: 0.75%;
+  color: var(--colors-text-primary);
 }
-html a {
-  text-decoration: none; /* remove all underlines of links*/
-}
+
 main, header, footer {
-  background-color: var(--colors--background);/* set the background color and margin for all header, main and footer*/
-  margin: var(--layout--extra--small-spacing);
+  background-color: var(--colors-background);/* set the background color and margin for all header, main and footer */
+  margin: var(--layout-spacing-extra-small);
   height: auto;
 }
+
 a, a:visited {
-  color: var(--colors--a);
+  color: var(--colors-a);
+  text-decoration: none; /* remove all underlines of links */
 }
+
 p {
-  color: var(--text--color--primary);
+  color: var(--text-color-primary);
 }
+
 h1{
-  margin-left: var(--layout--small-spacing);
+  margin: 2.5%;
 }
+
 main ul {
-  padding-left: var(--layout--small-spacing);
+  padding-left: var(--layout-spacing-small);
 }
+
 nav ul li, footer div ul li {
-  background-color: var(--colors--background--link);
-  border: 1px dotted var(--colors--border);/* set the border and background color for all list items of nav and footer*/
+  background-color: var(--colors-background-link);
+  border: 1px dotted var(--colors-border);/* set the border and background color for all list items of nav and footer */
   padding: 0.5%;
   margin: auto;
 }
+
 .index header, .index footer, .concept header, .concept footer, .checkPoint header, .checkPoint footer, .references header, .references footer{
-  grid-column: 1 / -1;/*expand header of all pages to to whole width*/
+  grid-column: 1 / -1;/* expand header of all pages to to whole width */
 }
+
 nav ul, footer ul {
-  list-style-type: none; /* remove all underlines of links of nav and footer*/
+  list-style-type: none; /* remove all underlines of links of nav and footer */
   padding: 0;
   height: auto;
-  margin: 2% 5.5% 2% 1.25%;
+  margin: 2% 5.5% 2% 0;
   box-sizing:content-box;
 }
-section {
-  margin: 2.75%;
-}
+
 label input{
-  cursor: pointer;/*change the cursor to pointer when hovering over the input*/
+  cursor: pointer;/* change the cursor to pointer when hovering over the input */
 }
+
 th, td {
-  padding: var(--layout--extra-small-spacing);
+  padding: var(--layout-spacing-extra-small);
   text-align: center;
 }
+
 button {
-  background-color: rgba(0, 0, 139, 0.465);
-  border: 1px solid rgb(209, 213, 219);
+  background-color: rgb(0 0 139 / 46.5%);
+  border: 1px solid rgb(209 213 219);
   border-radius: 0.625rem;
   box-sizing: border-box;
   color: gold;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.925rem;
   font-weight: 475;
-  line-height: 1.5rem;
+  line-height: var(--layout-lineheight-standard);
   padding: 0.45%;
   text-align: center;
   text-decoration-thickness: auto;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   cursor: pointer;
   touch-action: manipulation;
-  margin-left: 3.5%;
+  margin: 2.5%;
 }
 
 button:hover {
-  background-color: rgba(15, 106, 197, 0.8);
+  background-color: rgb(15 106 197 / 80%);
 }
 
 button:focus {
@@ -126,15 +133,16 @@ button:focus-visible {
 .float-left {
   float: left;
   margin-left: 0;
+
   /* how you can remove or adjust a lot of extra space around them */
 }
 
 .float-left img {
-  /*regulate the shape of images*/
-  width: var(--width--standard);
+  /* regulate the shape of images */
+  width: var(--width-standard);
   vertical-align: middle;
   margin-bottom: 1rem;
-  margin-top: -10px;
+  
 }
 
 .clear_float {
@@ -152,11 +160,14 @@ figcaption {
 }
 
 section {
-  max-width: 95%;
+  padding-left: 1.75%;
+  max-width: var(--width-standard);
 }
+
 span {
   font-weight: bold;
 }
+
 /* INDEX */
 .index {
   background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
@@ -165,59 +176,66 @@ span {
   display: grid;
   grid-template-rows: repeat(3, auto);
 }
+
 .index main div{
   display: block;
-  gap: var(--layout--small-spacing);
+  gap: var(--layout-spacing-small);
 }
+
 .index main :first-child {
   grid-column: 1 / -1;
 }
+
 .index main :first-child figure {
   float:left;
   margin: 0 2.5% 1% 0;
 }
+
 .index main section h2 {
-  margin: 0 0 1% 0;
+  margin: 0;
 }
-.index main figure {
-  float:left;
-}
+
 
 
 /* CONCEPT */
 .concept {
-  background-image: url('../images/geissht-BzS6WjI6IhY-unsplash.jpg');
+  background-image: url('../images/safwan-thottoli-FnrGH37B6cU-unsplash.jpg');
   background-position: center; 
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
   display: grid;
   grid-template-rows: repeat(3, auto);
 }
+
 .concept main div {
   display: grid;
-  gap: var(--layout--small-spacing);
+  gap: var(--layout-spacing-small);
   grid-template-rows: repeat(2, auto);
 }
+
 .res_image img, .res_image figcaption{
   display: none;
 }
+
 .concept main div section{
-  margin-top: var(--layout--extra--small-spacing);
-  background-color: var(--colors--background--section);
+  margin-top: var(--layout-spacing-extra-small);
+  background-color: var(--colors-background-section);
   padding:2.25%;
 }
 
-/* CHECK POINT*/
+/* CHECK POINT */
 .checkPoint {
   background-image: url('../images/annie-spratt-YN9zG6nGvFI-unsplash.jpg');
   background-position: center; 
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
   display: grid;
-  gap: var(--layout--small-spacing);
+  gap: var(--layout-spacing-small);
   grid-template-rows: repeat(3, auto);
 }
+
 .checkPoint main {
   display: block;
 }
+
 .checkPoint main section form label{
   display: block;
 }
@@ -226,113 +244,123 @@ span {
 .references {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  gap: var(--layout--small-spacing);
+  gap: var(--layout-spacing-small);
   background-image: url('../images/annie-spratt-tmoFNI1ZEwA-unsplash.jpg');
   background-position: center; 
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
   align-items: start;
 }
+
 .references main {
   align-items: start;
 }
 
 .references aside {
-  background-color: var(--colors--background);
+  background-color: var(--colors-background);
   display: block;
-  padding: var(--layout--padding);
+  padding: var(--layout-padding);
 }
+
 .references aside form fieldset {
   border: none;
   padding: 0;
   
 }
+
 .follow ul {
   list-style: none;
   display: flex;
   padding:0;
-  gap: var(--layout--small-spacing);
+  gap: var(--layout-spacing-small);
   justify-content: flex-start;
   grid-template-columns: repeat(4, 0.5rem);
 }
+
 .references table {
-  width:var(--width--small);
+  width:var(--width-small);
   border-radius: 5px;
-  border: 1px solid var(--colors--border);
-  background-color: var(--colors--background--table);
+  border: 1px solid var(--colors-border);
+  background-color: var(--colors-background-table);
 }
+
 .references table th, .references table td {
-  border: 0.5px solid var(--colors--border);
-  padding: var(--layout--extra-small-spacing);
+  border: 0.5px solid var(--colors-border);
+  padding: var(--layout-spacing-extra-small);
 }
-.references .container section table {
-  width: var(--width--medium);
-}
+
 .topBtn {
   position: fixed;
+
   /* Fixed positioning makes the element stay in the same place even when the page is scrolled */
   bottom: 0;
+
   /* Position at the bottom of the viewport */
   right: 0;
+
   /* Position at the right of the viewport */
   display: inline;
   max-width: 17.5%;
   min-width: 2.5rem;
 }
+
 /* Mobile layout */
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
   nav ul {
     display: none;/* hide the list when the screen is smaller than 600px */
     margin-left: 4%;
   }
+
   nav button, nav ul.show {
     display: block;/* show the button and the list when the screen is smaller than 600px */
   }
+
   figure img {
     max-width: 100%;/* make the image responsive */
     height: auto;
     margin:auto;
     float: none;/* remove float */
   }
+
   figure {
-    margin-bottom: var(--layout--extra-small-spacing);
+    margin-bottom: var(--layout-spacing-extra-small);
   }
+
   .references main div section table {
     display: block;/* table will be displayed as block */
-    overflow-x: auto;/*horizontally scrollable*/
+    overflow-x: auto;/* horizontally scrollable */
     width: 100%;
     border: 0;/* remove border */
   }
 }
+
 /* Medium layout */
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   html {
-    font-size: var(--fontsize--medium);
+    font-size: var(--fontsize-medium);
   }
+
   nav button {
     display: none;
   }
-  nav ul li {
+
+  nav ul li, footer div ul li {
     display: inline-block;
-    margin: 0 0.5rem;
+    margin: 1.25% 0.5% 1.25% 2%;
   }
+
   .checkPoint main div{
     display: grid;
-    gap: var(--layout--small-spacing);
+    gap: var(--layout-spacing-small);
     grid-template: repeat(2, auto)/ repeat(2, auto);
   }
-  footer div ul li {
-    display: inline;
-    margin-right: 2.5%;
-  }
+
   .references main section table {
     display: block;/* table will be displayed as block */
-    overflow-x: auto;/*horizontally scrollable*/
-    width: var(--width--standard);
+    overflow-x: auto;/* horizontally scrollable */
+    width: var(--width-standard);
     border: 0;/* remove border */
   }
-  .references main section {
-    margin-top: 2%;
-  }
+
   .references aside {
     display: grid;
     grid-template: repeat(2, auto) / repeat(2, 1fr);
@@ -342,73 +370,74 @@ span {
     grid-row: 1/-1;
   }
 }
+
 /* Large devices (laptops/desktops) */
-@media only screen and (min-width: 992px) {
+@media only screen and (width >= 992px) {
   html {
-    font-size: var(--fontsize--large);
-    line-height: var(--layout--large-spacing);
+    font-size: var(--fontsize-large);
+    line-height: var(--layout-lineheight-extralarge);
   }
+
   .index main div{
     display: grid;
-    gap: var(--layout--small-spacing);
+    gap: var(--layout-spacing-small);
     grid-template: repeat(2, auto) / repeat(2, 1fr);
     margin: auto;
   }
+
   .index main:nth-child(1) {
     grid-column: span 2;
   }
+
   .index section {
     margin-top: 1.5%;
   }
+
   .checkPoint main section form label {
-    line-height:var(--layout--middle-spacing);
+    line-height:var(--layout-lineheight-large);
   }
+
   .references {
     grid-template-columns: auto 200px;/* set the aside to the right */
   }
+
   .references aside {
     display: block;
   }
+
   .podcast p {
     font-size: 85%;/* reduce the font size */
   }
+
   audio {
-    width: var(--width--standard);
+    width: var(--width-standard);
   }
+
   .concept main div {
     display: grid;
-    gap: var(--layout--small-spacing);
+    gap: var(--layout-spacing-small);
     grid-template-columns: repeat(3, auto);
   }
+
   .concept main div section:nth-child(1) {
     grid-column: span 2;
   }
+
   .res_image img, .res_image figcaption {
     display:block;
   }
+
   .clear_float {
     clear: none;
     margin-top: 0;
   }
 }
+
 /* Extra large devices (large laptops and desktops) */
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: var(--fontsize--extra-large);
-    line-height: var(--layout--large-spacing);
-  }
+@media only screen and (width >= 1200px) {
   .container {
-    max-width: var(--width--max);
-    margin: auto; /* have the content centered with a maximum width.*/
-  }
-  main .container {
+    max-width: var(--width-max);
+    margin: auto; /* have the content centered with a maximum width. */
     justify-content: center;
-    max-width: var(--width--max);
-    margin: auto;
-  }
-  
-  main .container section {
-    align-self: flex-start;
-    width: var(--width--standard);
   }
 }
