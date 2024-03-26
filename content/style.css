@@ -142,7 +142,6 @@ button:focus-visible {
   width: var(--width-standard);
   vertical-align: middle;
   margin-bottom: 1rem;
-  
 }
 
 .clear_float {
@@ -194,7 +193,9 @@ span {
 .index main section h2 {
   margin: 0;
 }
-
+.index main img {
+  margin-top: 5.5%;
+}
 
 
 /* CONCEPT */

@@ -1,7 +1,16 @@
 <?php
+header('Content-Type: application/json');
+
 // for forms
 function handleForm()
 {
+    $results = array(
+        "section1" => "",
+        "section2" => "",
+        "section3" => "",
+        "section4" => ""
+    );
+
     // cpoint 1
     if (isset ($_GET["emailPH"], $_GET["voicePH"], $_GET["smsPH"], $_GET["pagePH"], $_GET["calendarPH"], $_GET["quishingPH"])) {
         $emailPhishing = $_GET["emailPH"];
@@ -12,26 +21,23 @@ function handleForm()
         $quishing = $_GET["quishingPH"];
 
         if ($emailPhishing && $voicePhishing && $smsPhishing && $pageHijacking && $calendarPhishing && $quishing) {
-            echo "Congratulations! All options for the first section are correct.";
+            $results["section1"] = "Congratulations! All options for the first section are correct.";
         } else {
-            echo "Sorry, not all options for the first section are correct. Please try again.";
+            $results["section1"] = "Sorry, not all options for the first section are correct. Please try again.";
         }
-    } else {
-        echo "Please select all options for the first section before submitting.";
     }
-
     // cpoint 2
     if (isset ($_GET["persSecurity"], $_GET["enhPerformance"])) {
         $persSecurity = $_GET["persSecurity"];
         $enhPerformance = $_GET["enhPerformance"];
 
         if ($persSecurity && $enhPerformance) {
-            echo "<br>Congratulations! All options for the second section are correct.";
+            $results["section2"] = "Congratulations! All options for the second section are correct.";
         } else {
-            echo "<br>Sorry, not all options for the second section are correct. Please try again.";
+            $results["section2"] = "Sorry, not all options for the second section are correct. Please try again.";
         }
     } else {
-        echo "<br>Please select all options for the second section before submitting.";
+        $results["section2"] = "Please select all options for the second section before submitting.";
     }
 
     // cpoint 3
@@ -39,12 +45,12 @@ function handleForm()
         $avoidPhishing = $_GET["avoidPhishing"];
 
         if ($avoidPhishing == "allCorrect") {
-            echo "<br>Congratulations! Your answer for the third section is correct.";
+            $results["section3"] = "Congratulations! Your answer for the third section is correct.";
         } else {
-            echo "<br>Sorry, your answer for the third section is incorrect. Please try again.";
+            $results["section3"] = "Sorry, your answer for the third section is incorrect. Please try again.";
         }
     } else {
-        echo "<br>Please select an answer for the third section before submitting.";
+        $results["section3"] = "Please select an answer for the third section before submitting.";
     }
 
     // cpoint 4
@@ -52,13 +58,15 @@ function handleForm()
         $crime = $_GET["crime"];
 
         if ($crime == "allCorrect") {
-            echo "<br>Congratulations! Your answer for the fourth section is correct.";
+            $results["section4"] = "Congratulations! Your answer for the fourth section is correct.";
         } else {
-            echo "<br>Sorry, your answer for the fourth section is incorrect. Please try again.";
+            $results["section4"] = "Sorry, your answer for the fourth section is incorrect. Please try again.";
         }
     } else {
-        echo "<br>Please select an answer for the fourth section before submitting.";
+        $results["section4"] = "Please select an answer for the fourth section before submitting.";
     }
+
+    return $results;
 }
 
 // references contact form
@@ -71,7 +79,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 }
 
 // deals with contact form data
-function test_input($data) {
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -79,5 +88,6 @@ function test_input($data) {
 }
 
 // handle form
-handleForm();
+$results = handleForm();
+echo json_encode($results);
 ?>
