@@ -17,7 +17,7 @@
 /* ROOT */
 :root {
   --fontsize-medium: 115%;
-  --fontsize-large: 125%;
+  --fontsize-large: 135%;
   --colors-text-primary: rgb(25 37 56);
   --colors-a:rgb(82 0 0);
   --colors-background:rgb(255 255 255 / 25.1%);
@@ -114,7 +114,7 @@ button {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   cursor: pointer;
   touch-action: manipulation;
-  margin: 2.5%;
+  margin: 1.5%;
 }
 
 button:hover {
