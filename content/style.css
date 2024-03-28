@@ -73,7 +73,7 @@ main ul {
 nav ul li, footer div ul li {
   background-color: var(--colors-background-link);
   border: 1px dotted var(--colors-border);/* set the border and background color for all list items of nav and footer */
-  padding: 0.5%;
+  padding: 0.5% 1.5%;
   margin: auto;
 }
 
@@ -108,7 +108,7 @@ button {
   font-size: 0.925rem;
   font-weight: 475;
   line-height: var(--layout-lineheight-standard);
-  padding: 0.45%;
+  padding: 1.95%;
   text-align: center;
   text-decoration-thickness: auto;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
@@ -128,6 +128,18 @@ button:focus {
 
 button:focus-visible {
   box-shadow: none;
+}
+.topBtn {
+  position: fixed;
+  /* Fixed positioning makes the element stay in the same place even when the page is scrolled */
+  bottom: 0;
+  /* Position at the bottom of the viewport */
+  right: 0;
+  /* Position at the right of the viewport */
+  display: inline;
+  max-width: 17.5%;
+  min-width: 2.5rem;
+  padding: 0.75%;
 }
 
 .float-left {
@@ -156,6 +168,8 @@ figure {
 
 figcaption {
   text-align: left;
+  font-style: italic;
+  color: rgb(41, 49, 22);
 }
 
 section {
@@ -167,6 +181,13 @@ span {
   font-weight: bold;
 }
 
+label {
+  display: block;
+}
+
+.homeBtn {
+  background-color: rgba(175, 251, 213, 0.376);
+}
 /* INDEX */
 .index {
   background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
@@ -237,10 +258,6 @@ span {
   display: block;
 }
 
-.checkPoint main section form label{
-  display: block;
-}
-
 /* REFERENCE */
 .references {
   display: grid;
@@ -265,7 +282,6 @@ span {
 .references aside form fieldset {
   border: none;
   padding: 0;
-  
 }
 
 .follow ul {
@@ -287,21 +303,6 @@ span {
 .references table th, .references table td {
   border: 0.5px solid var(--colors-border);
   padding: var(--layout-spacing-extra-small);
-}
-
-.topBtn {
-  position: fixed;
-
-  /* Fixed positioning makes the element stay in the same place even when the page is scrolled */
-  bottom: 0;
-
-  /* Position at the bottom of the viewport */
-  right: 0;
-
-  /* Position at the right of the viewport */
-  display: inline;
-  max-width: 17.5%;
-  min-width: 2.5rem;
 }
 
 /* Mobile layout */
@@ -332,10 +333,13 @@ span {
     width: 100%;
     border: 0;/* remove border */
   }
+  .references aside section{
+    max-width: 35%;
+  }
 }
 
 /* Medium layout */
-@media screen and (width >= 600px) {
+@media screen and (width > 600px) {
   html {
     font-size: var(--fontsize-medium);
   }
@@ -369,6 +373,9 @@ span {
 
   .references aside section:nth-child(1) {
     grid-row: 1/-1;
+  }
+  .references aside section{
+    max-width: 45%;
   }
 }
 
