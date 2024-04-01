@@ -16,23 +16,25 @@
 
 /* ROOT */
 :root {
-  --fontsize-medium: 115%;
+  --fontsize-medium: 115%;/* set the font size */
   --fontsize-large: 135%;
-  --colors-text-primary: rgb(25 37 56);
-  --colors-a:rgb(82 0 0);
-  --colors-background:rgb(255 255 255 / 25.1%);
-  --colors-border: rgb(7 102 123);
-  --colors-background-link: rgb(230 222 193 / 34.6%);
-  --colors-background-table:rgb(221 243 254 / 15.2%);
-  --colors-background-section: rgb(219 179 179 / 15.3%);
-  --layout-padding: 0.375rem;
-  --layout-spacing-extra-small: 0.5rem;
-  --layout-spacing-small: 1rem;
-  --layout-lineheight-standard:1.5;
+  --colors-text-primary: rgb(25 37 56);/* set the text color */
+  --colors-a:rgb(82 0 0);/* set the color of links */
+  --colors-background:rgb(255 255 255 / 25.1%);/* set the background color */
+  --colors-border: rgb(7 102 123);/* set the border color */
+  --colors-background-link: rgb(230 222 193 / 34.6%);/* set the background color of links */
+  --colors-background-table:rgb(221 243 254 / 15.2%);/* set the background color of tables */
+  --colors-background-section: rgb(219 179 179 / 15.3%);/* set the background color of sections */
+  --layout-padding: 0.375rem;/* set the padding */
+  --layout-spacing-extra-small: 0.15rem;/* set the spacing */
+  --layout-spacing-small: 0.5rem;
+  --layout-spacing-middle: 1rem;
+  --layout-lineheight-standard:1.5;/* set the line height */
   --layout-lineheight-large:1.75;
   --layout-lineheight-extralarge:1.85;
-  --width-max: 1200px;
-  --width-standard: 95%;
+  --width-max: 1200px;/* set the maximum width */
+  --width-standard:100%;/* set the width */
+  --width-middle: 95%;
   --width-small: 75%;
 }
 
@@ -47,10 +49,10 @@ html {
   color: var(--colors-text-primary);
 }
 
-main, header, footer {
+main, header, footer, aside{
   background-color: var(--colors-background);/* set the background color and margin for all header, main and footer */
   margin: var(--layout-spacing-extra-small);
-  height: auto;
+  height: auto;/* set the height */
 }
 
 a, a:visited {
@@ -63,18 +65,18 @@ p {
 }
 
 h1{
-  margin: 2.5%;
+  margin: 2.5%;/* set the margin */
 }
 
 main ul {
-  padding-left: var(--layout-spacing-small);
+  padding-left: var(--layout-spacing-middle);
 }
 
 nav ul li, footer div ul li {
   background-color: var(--colors-background-link);
   border: 1px dotted var(--colors-border);/* set the border and background color for all list items of nav and footer */
-  padding: 0.5% 1.5%;
-  margin: auto;
+  padding: 0.5% 1.5%;/* set the padding */
+  margin: auto;/* set the margin */
 }
 
 .index header, .index footer, .concept header, .concept footer, .checkPoint header, .checkPoint footer, .references header, .references footer{
@@ -83,10 +85,10 @@ nav ul li, footer div ul li {
 
 nav ul, footer ul {
   list-style-type: none; /* remove all underlines of links of nav and footer */
-  padding: 0;
-  height: auto;
-  margin: 2% 5.5% 2% 0;
-  box-sizing:content-box;
+  padding: 0;/* set the padding */
+  height: auto;/* set the height */
+  margin: 2% 5.5% 2% 0;/* set the margin */
+  box-sizing:content-box; /* set the box-sizing */
 }
 
 label input{
@@ -94,215 +96,209 @@ label input{
 }
 
 th, td {
-  padding: var(--layout-spacing-extra-small);
-  text-align: center;
+  padding: var(--layout-spacing-small);
+  text-align: center;/* set the text alignment */
 }
 
-button {
-  background-color: rgb(0 0 139 / 46.5%);
-  border: 1px solid rgb(209 213 219);
-  border-radius: 0.625rem;
-  box-sizing: border-box;
-  color: gold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.925rem;
-  font-weight: 475;
+.button-16 {
+  background-color: rgba(73, 39, 152, 0.759);/* set the background color */
+  border: 1px solid rgb(209 213 219);/* set the border */
+  border-radius: 0.625rem;/* set the border radius */
+  box-sizing: border-box;/* set the box-sizing */
+  color: gold;/* set the color */
+  font-family: Arial, Helvetica, sans-serif;/* set the font family */
+  font-size: 0.925rem;/* set the font size */
+  font-weight: 475;/* set the font weight */
   line-height: var(--layout-lineheight-standard);
-  padding: 1.95%;
-  text-align: center;
-  text-decoration-thickness: auto;
+  padding: 1.95%;/* set the padding */
+  text-align: center;/* set the text alignment */
+  text-decoration-thickness: auto;/* set the text decoration thickness */
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
-  cursor: pointer;
-  touch-action: manipulation;
-  margin: 1.5%;
+  cursor: pointer;/* change the cursor to pointer */
+  touch-action: manipulation;/* set the touch action */
+  margin: 1.5%;/* set the margin */
 }
 
-button:hover {
-  background-color: rgb(15 106 197 / 80%);
+.button-16:hover {
+  background-color: rgba(66, 160, 255, 0.628);
 }
 
-button:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.button-16:focus {
+  outline: 2px solid transparent;/* set the outline */
+  outline-offset: 2px;/* set the outline offset */
 }
 
-button:focus-visible {
-  box-shadow: none;
+.button-16:focus-visible {
+  box-shadow: none;/* remove the box shadow */
 }
+
 .topBtn {
-  position: fixed;
-  /* Fixed positioning makes the element stay in the same place even when the page is scrolled */
-  bottom: 0;
-  /* Position at the bottom of the viewport */
-  right: 0;
-  /* Position at the right of the viewport */
-  display: inline;
-  max-width: 17.5%;
-  min-width: 2.5rem;
-  padding: 0.75%;
+  position: fixed;/* Fixed positioning makes the element stay in the same place even when the page is scrolled */
+  bottom: 0; /* Position at the bottom of the viewport */
+  right: 0; /* Position at the right of the viewport */
+  padding: 1%;/* set the padding */
+}
+
+.homeBtn {
+  background-color: rgba(106, 255, 126, 0.453);
+  position: fixed;/* Fixed positioning makes the element stay in the same place even when the page is scrolled */
+  top: 0;/* Position at the top of the viewport */
+  right: 0;/* Position at the right of the viewport */
+  padding: 1%;/* set the padding */
 }
 
 .float-left {
-  float: left;
-  margin-left: 0;
-
-  /* how you can remove or adjust a lot of extra space around them */
+  float: left;/* set the float */
+  margin-left: 0;/* set the margin */
 }
 
 .float-left img {
   /* regulate the shape of images */
-  width: var(--width-standard);
-  vertical-align: middle;
-  margin-bottom: 1rem;
+  width: var(--width-middle);
+  vertical-align: middle;/* set the vertical alignment */
+  margin-bottom: 1rem;/* set the margin */
 }
 
 .clear_float {
-  clear: both;
-  margin-top: -1rem;
+  clear: both;/* clear the float */
+  margin-top: -1rem;/* set the margin */
 }
 
 figure {
-  display: flex;
-  flex-flow: column;
+  display: flex;/* set the display */
+  flex-flow: column;/* set the flex flow */
 }
 
 figcaption {
-  text-align: left;
-  font-style: italic;
-  color: rgb(41, 49, 22);
+  text-align: left;/* set the text alignment */
+  font-style: italic;/* set the font style */
+  color: rgb(41, 49, 22);/* set the color */
 }
 
 section {
-  padding-left: 1.75%;
-  max-width: var(--width-standard);
+  padding-left: 1.75%;/* set the padding */
+  max-width: var(--width-middle);
 }
 
 span {
-  font-weight: bold;
+  font-weight: bold;/* set the font weight */
 }
 
 label {
-  display: block;
+  display: block;/* set the display */
 }
 
-.homeBtn {
-  background-color: rgba(175, 251, 213, 0.376);
-}
+
 /* INDEX */
 .index {
-  background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');
-  background-position: center; 
+  background-image: url('../images/mitchell-luo-kAssc7Sx8pg-unsplash.jpg');/* set the background image */
+  background-position: center; /* Center the background image */
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
-  display: grid;
-  grid-template-rows: repeat(3, auto);
+  display: grid;/* set the display */
+  grid-template-rows: repeat(3, auto);/* set the grid template rows */
 }
 
 .index main div{
-  display: block;
-  gap: var(--layout-spacing-small);
+  display: block;/* set the display */
 }
 
 .index main :first-child {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1;/* expand the first child to the whole width */
 }
 
 .index main :first-child figure {
-  float:left;
-  margin: 0 2.5% 1% 0;
+  float:left;/* set the float */
+  margin: 0 2.5% 1% 0;/* set the margin */
 }
 
 .index main section h2 {
-  margin: 0;
+  margin: 0;/* set the margin */
 }
 .index main img {
-  margin-top: 5.5%;
+  margin-top: 5.5%;/* set the margin */
 }
 
 
 /* CONCEPT */
 .concept {
-  background-image: url('../images/safwan-thottoli-FnrGH37B6cU-unsplash.jpg');
-  background-position: center; 
+  background-image: url('../images/safwan-thottoli-FnrGH37B6cU-unsplash.jpg');/* set the background image */
+  background-position: center; /* Center the background image */
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
-  display: grid;
-  grid-template-rows: repeat(3, auto);
+  display: grid;/* set the display */
+  grid-template-rows: repeat(3, auto);/* set the grid template rows */
 }
 
 .concept main div {
-  display: grid;
-  gap: var(--layout-spacing-small);
-  grid-template-rows: repeat(2, auto);
+  display: grid;/* set the display */
+  grid-template-rows: repeat(2, auto);/* set the grid template rows */
 }
 
 .res_image img, .res_image figcaption{
-  display: none;
+  display: none;/* hide the image and figcaption */
 }
 
 .concept main div section{
-  margin-top: var(--layout-spacing-extra-small);
+  margin-top: var(--layout-spacing-small);
   background-color: var(--colors-background-section);
-  padding:2.25%;
+  padding:2.25%;/* set the padding */
 }
 
 /* CHECK POINT */
 .checkPoint {
-  background-image: url('../images/annie-spratt-YN9zG6nGvFI-unsplash.jpg');
-  background-position: center; 
+  background-image: url('../images/annie-spratt-YN9zG6nGvFI-unsplash.jpg');/* set the background image */
+  background-position: center; /* Center the background image */
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
-  display: grid;
-  gap: var(--layout-spacing-small);
-  grid-template-rows: repeat(3, auto);
+  display: grid;/* set the display */
+  grid-template-rows: repeat(3, auto);/* set the grid template rows */
 }
 
 .checkPoint main {
-  display: block;
+  display: block;/* set the display */
 }
 
 /* REFERENCE */
 .references {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  gap: var(--layout-spacing-small);
-  background-image: url('../images/annie-spratt-tmoFNI1ZEwA-unsplash.jpg');
-  background-position: center; 
+  display: grid; /* set the display */
+  grid-template-rows: repeat(3, auto);/* set the grid template rows */
+  background-image: url('../images/annie-spratt-tmoFNI1ZEwA-unsplash.jpg');/* set the background image */
+  background-position: center; /* Center the background image */
   background-size: cover; /* Makes the background image as large as possible while maintaining its aspect ratio */
-  align-items: start;
+  align-items: start;/* set the alignment */
 }
 
 .references main {
-  align-items: start;
+  align-items: start;/* set the alignment */
 }
 
 .references aside {
   background-color: var(--colors-background);
-  display: block;
+  display: block;/* set the display */
   padding: var(--layout-padding);
 }
 
 .references aside form fieldset {
-  border: none;
-  padding: 0;
+  border: none;/* remove the border */
+  padding: 0;/* set the padding */
 }
 
 .follow ul {
-  list-style: none;
-  display: flex;
-  padding:0;
-  gap: var(--layout-spacing-small);
-  justify-content: flex-start;
-  grid-template-columns: repeat(4, 0.5rem);
+  list-style: none;/* remove the list style */
+  display: flex;/* set the display */
+  padding: 0;/* set the padding */
+  justify-content: flex-start;/* set the justification */
+}
+.follow ul li {
+  margin-right: 2%;/* set the margin */
 }
 
-.references table {
-  width:var(--width-small);
-  border-radius: 5px;
-  border: 1px solid var(--colors-border);
-  background-color: var(--colors-background-table);
+.references main div section table {
+  width:var(--width-standard);
+  background-color: var(--colors-background-table);/* set the background color */
 }
 
 .references table th, .references table td {
   border: 0.5px solid var(--colors-border);
-  padding: var(--layout-spacing-extra-small);
+  padding: var(--layout-spacing-small);
 }
 
 /* Mobile layout */
@@ -317,24 +313,23 @@ label {
   }
 
   figure img {
-    max-width: 100%;/* make the image responsive */
-    height: auto;
-    margin:auto;
+    max-width: var(--width-standard);
+    height: auto;/* set the height */
+    margin:auto;/* set the margin */
     float: none;/* remove float */
   }
 
   figure {
-    margin-bottom: var(--layout-spacing-extra-small);
+    margin-bottom: var(--layout-spacing-small);
   }
 
   .references main div section table {
     display: block;/* table will be displayed as block */
     overflow-x: auto;/* horizontally scrollable */
-    width: 100%;
     border: 0;/* remove border */
   }
-  .references aside section{
-    max-width: 35%;
+  .references aside form{
+    max-width: 35%;/* set the maximum width */
   }
 }
 
@@ -345,37 +340,35 @@ label {
   }
 
   nav button {
-    display: none;
+    display: none;/* hide the button */
   }
 
   nav ul li, footer div ul li {
-    display: inline-block;
-    margin: 1.25% 0.5% 1.25% 2%;
+    display: inline-block;/* set the display */
+    margin: 1.25% 0.5% 1.25% 2%;/* set the margin */
   }
 
   .checkPoint main div{
-    display: grid;
-    gap: var(--layout-spacing-small);
-    grid-template: repeat(2, auto)/ repeat(2, auto);
+    display: grid;/* set the display */
+    grid-template: repeat(2, auto)/ repeat(2, auto);/* set the grid template */
   }
 
   .references main section table {
     display: block;/* table will be displayed as block */
     overflow-x: auto;/* horizontally scrollable */
-    width: var(--width-standard);
-    border: 0;/* remove border */
+    width: var(--width-middle);
   }
 
   .references aside {
-    display: grid;
-    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    display: grid;/* set the display */
+    grid-template: repeat(2, auto) / repeat(2, 1fr);/* set the grid template */
   }
 
   .references aside section:nth-child(1) {
-    grid-row: 1/-1;
+    grid-row: 1/-1;/* expand the first child to the whole width */
   }
-  .references aside section{
-    max-width: 45%;
+  .references aside section form{
+    max-width: 45%;/* set the maximum width */
   }
 }
 
@@ -387,18 +380,17 @@ label {
   }
 
   .index main div{
-    display: grid;
-    gap: var(--layout-spacing-small);
-    grid-template: repeat(2, auto) / repeat(2, 1fr);
-    margin: auto;
+    display: grid;/* set the display */
+    grid-template: repeat(2, auto) / repeat(2, 1fr);/* set the grid template */
+    margin: auto;/* set the margin */
   }
 
   .index main:nth-child(1) {
-    grid-column: span 2;
+    grid-column: span 2;/* expand the first child to the whole width */
   }
 
   .index section {
-    margin-top: 1.5%;
+    margin-top: 1.5%;/* set the margin */
   }
 
   .checkPoint main section form label {
@@ -406,11 +398,11 @@ label {
   }
 
   .references {
-    grid-template-columns: auto 200px;/* set the aside to the right */
+    grid-template-columns: auto 20%;/* set the aside to the right */
   }
 
   .references aside {
-    display: block;
+    display: block;/* set the display */
   }
 
   .podcast p {
@@ -418,26 +410,25 @@ label {
   }
 
   audio {
-    width: var(--width-standard);
+    width: var(--width-middle);
   }
 
   .concept main div {
-    display: grid;
-    gap: var(--layout-spacing-small);
-    grid-template-columns: repeat(3, auto);
+    display: grid;/* set the display */
+    grid-template-columns: repeat(3, auto);/* set the grid template columns */
   }
 
   .concept main div section:nth-child(1) {
-    grid-column: span 2;
+    grid-column: span 2;/* expand the first child to the whole width */
   }
 
   .res_image img, .res_image figcaption {
-    display:block;
+    display:block;/* show the image and figcaption */
   }
 
   .clear_float {
-    clear: none;
-    margin-top: 0;
+    clear: none;/* remove the clear */
+    margin-top: 0;/* set the margin */
   }
 }
 
@@ -446,6 +437,6 @@ label {
   .container {
     max-width: var(--width-max);
     margin: auto; /* have the content centered with a maximum width. */
-    justify-content: center;
+    justify-content: center;/* set the justification */
   }
 }
